@@ -1,0 +1,191 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #e0e0f8;
+    padding: 20px;
+  }
+  
+  .container {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: 500px; /* batas tinggi tetap */
+    overflow-y: auto; /* scroll jika konten lebih */
+    position: relative;
+  }
+  
+  .greeting {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .task-box {
+    display: flex;
+    margin: 10px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 50px; /* Tetapkan tinggi pasti */
+  }
+  
+  .task-content {
+    flex: 1;
+    background-color: #f3f3f3;
+    padding: 0 16px; /* Buang vertical padding */
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
+    height: 100%;
+  }
+  
+  .dropdown-status {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0; /* Hilangkan padding default */
+    margin: 0;   /* Hindari celah luar */
+  }
+  
+  .dropdown-status.blue {
+    background-color: #1e3a8a;
+  }
+  
+  .dropdown-status.yellow {
+    background-color: #d4af37;
+  }
+  
+  
+  /* MODAL STYLE */
+  .task-modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 999;
+  }
+  
+  .modal-content {
+    background: white;
+    width: 700px;
+    max-width: 95vw;
+    max-height: 80vh;
+    padding: 30px;
+    border-radius: 20px;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #2b3a67;
+    margin-bottom: 15px;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #999;
+  }
+  
+  .modal-body h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px 0 10px;
+  }
+  
+  .modal-body .deadline {
+    color: red;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  
+  .edit-btn {
+    background-color: #00cc66;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .delete-btn {
+    background-color: #ff3333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+  }    
+  
+  .top-bar {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+  }
+  
+  .round-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #1f3c88;
+    color: white;
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+  }
+  
+  .round-button:hover {
+    background-color: #162e63;
+  }
+  
+  
+  .alert {
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .alert-success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  
+  
