@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('todolists', function (Blueprint $table) {
             $table->id();
-            $table->string('judul'); // nama tugas
-            $table->text('deskripsi')->nullable(); // deskripsi tugas (boleh kosong)
-            $table->enum('proritas', ['priority', 'non-priority'])->default('non-priority'); // prioritas tugas
-            $table->enum('status', [ 'in-progress', 'completed'])->default('in-progress'); // status tugas
-            $table->date('deadline')->nullable(); // tenggat waktu (boleh kosong)
+            $table->string('judul');
+            $table->text('deskripsi')->nullable();
+            $table->enum('proritas', ['priority', 'non-priority'])->default('non-priority'); 
+            $table->enum('status', ['pending', 'in-progress', 'completed'])->default('pending'); 
+            $table->date('deadline')->nullable(); 
             $table->timestamps();
         });
     }

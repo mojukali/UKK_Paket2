@@ -21,10 +21,8 @@
          <hr>
 
          <div class="create-radio-group">
-            <label><input type="radio" name="proritas" value="priority"> <strong
-                  class="text-blue">Prioritas</strong></label>
-            <label><input type="radio" name="proritas" value="non-priority"> <strong class="text-yellow">Non
-                  Prioritas</strong></label>
+            <label><input type="radio" name="proritas" value="priority"> <strong class="text-blue">Prioritas</strong></label>
+            <label><input type="radio" name="proritas" value="non-priority"> <strong class="text-yellow">Non Prioritas</strong></label>
          </div>
 
          <label for="judul"><i style="color: crimson">* </i>Judul</label>

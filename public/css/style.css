@@ -1,6 +1,9 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: #e0e0f8;
+    background-image: url('/img/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 20px;
   }
   
@@ -8,9 +11,20 @@ body {
     background: white;
     border-radius: 20px;
     padding: 20px;
+    padding-top: 0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    height: 500px; /* batas tinggi tetap */
-    overflow-y: auto; /* scroll jika konten lebih */
+    height: 600px;
+    overflow-y: auto; 
+    position: relative;
+  }
+
+  .container1 {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: 480px;
+    overflow-y: auto; 
     position: relative;
   }
   
@@ -19,50 +33,60 @@ body {
     font-weight: bold;
   }
   
-  .task-box {
-    display: flex;
-    margin: 10px 0;
-    border-radius: 10px;
-    overflow: hidden;
-    height: 50px; /* Tetapkan tinggi pasti */
-  }
-  
   .task-content {
     flex: 1;
     background-color: #f3f3f3;
     padding: 0 16px; /* Buang vertical padding */
     display: flex;
     align-items: center;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
     cursor: pointer;
-    height: 100%;
+    height: 50px;
   }
   
-  .dropdown-status {
-    width: 50px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    color: white;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 0; /* Hilangkan padding default */
-    margin: 0;   /* Hindari celah luar */
-  }
-  
-  .dropdown-status.blue {
+  .dropbtn.blue {
     background-color: #1e3a8a;
   }
   
-  .dropdown-status.yellow {
-    background-color: #d4af37;
+  .dropbtn.yellow {
+    background-color: #DAE108;
   }
   
+  .dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+
   
   /* MODAL STYLE */
   .task-modal {
@@ -107,7 +131,7 @@ body {
   .modal-body h2 {
     font-size: 24px;
     font-weight: bold;
-    margin: 15px 0 10px;
+    margin: 15px 0 0;
   }
   
   .modal-body .deadline {
@@ -116,6 +140,8 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
+    margin-top: 8px;
+    padding-left: 2px
   }
   
   .modal-footer {
@@ -128,7 +154,7 @@ body {
   .edit-btn {
     background-color: #00cc66;
     color: white;
-    padding: 10px 20px;
+    padding: 7px 25px;
     border-radius: 6px;
     border: none;
     text-decoration: none;
@@ -186,6 +212,29 @@ body {
     background-color: #f8d7da;
     color: #721c24;
   }
+
+  /* Style The Dropdown Button */
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
   
+  th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+  }
+  
+  th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  
+
   
   
